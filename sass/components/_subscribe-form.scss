@@ -1,0 +1,113 @@
+// footer form subscribe ----------------------------------------------------
+.footer-form {
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include desktop {
+    margin-left: auto;
+  }
+}
+.form-box {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  @include desktop {
+    flex-direction: row;
+    gap: 0px;
+  }
+}
+
+// .form-input {
+//   width: 100%;
+// }
+
+.form-input__email-field {
+  padding: 15px 16px;
+  width: 300px;
+  height: 50px;
+
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 16px;
+
+  transition: border var(--animation-time) var(--animation-function),
+    outline var(--animation-time) var(--animation-function);
+
+  &:focus {
+    border: 1px solid var(--accent);
+    outline: 1px solid var(--accent);
+  }
+
+  @include mobile {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 358px;
+  }
+}
+
+.footer-form__title-field {
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: var(--white-colour);
+
+  @include desktop {
+    line-height: 1.14;
+    text-align: start;
+  }
+}
+
+.subscribe-btn {
+  position: relative;
+  padding: 10px 28px 10px 29px;
+
+  display: flex;
+  letter-spacing: 0.06em;
+
+  width: 200px;
+  height: 50px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  background: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  color: var(--white-colour);
+
+  transition: background-color var(--animation-time) var(--animation-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover);
+  }
+
+  @include desktop {
+    margin-left: 12px;
+  }
+}
+
+.subscribe-btn__icon {
+  position: absolute;
+  right: 26px;
+  top: 13px;
+  bottom: 13px;
+  left: 148px;
+}

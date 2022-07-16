@@ -1,0 +1,150 @@
+.footer {
+  padding: 60px 0px;
+
+  background-color: #2f303a;
+}
+
+// тут поменяла геп и тд
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+  @include tablet {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: baseline;
+
+    gap: 0px;
+  }
+}
+
+.footer-logo {
+  display: inline-block;
+
+  color: var(--white-colour);
+}
+
+.footer-address {
+  margin-top: 20px;
+
+  line-height: 1.71;
+  font-style: normal;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.footer-list__item--color {
+  color: var(--white-colour);
+}
+
+.footer-list__item:not(:first-child) {
+  margin-top: 8px;
+
+  @include desktop {
+    margin-top: 9px;
+  }
+}
+
+.footer-list__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color var(--animation-time) var(--animation-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
+}
+
+.footer-social {
+  // margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop {
+    align-items: start;
+  }
+}
+
+.footer-social__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--white-colour);
+}
+
+.social-list {
+  display: flex;
+}
+
+.social-list__item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.social-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--animation-time) var(--animation-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+  }
+}
+
+// .social-list__link:hover,
+// .social-list__link:focus {
+//   background-color: var(--accent);
+// }
+
+.social-list__icon {
+  fill: var(--white-colour);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop {
+    display: block;
+
+    margin-right: 70px;
+  }
+}

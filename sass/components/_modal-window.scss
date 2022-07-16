@@ -1,0 +1,143 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 300px;
+  min-height: 609px;
+  padding: 40px;
+
+  background-color: var(--white-colour);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @include mobile {
+    width: 450px;
+    min-height: 609px;
+  }
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+    transition: transform var(--animation-time) var(--animation-function);
+  }
+}
+
+.backdrop.is-hidden.modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  display: block;
+
+  width: 30px;
+  height: 30px;
+
+  background: var(--white-colour);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: fill var(--animation-time) var(--animation-function);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent);
+  }
+}
+
+.modal-btn__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+}
+
+.modal__text {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--titles);
+}
+
+// check for rules ------------------------------------------
+
+.rules-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  flex-basis: 75%;
+  flex-wrap: wrap;
+
+  // width: 371px;
+
+  @include mobile {
+    font-size: 12px;
+    flex-wrap: nowrap;
+  }
+
+  @include tablet {
+    font-size: 12px;
+
+    flex-wrap: nowrap;
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    font-size: 14px;
+  }
+}
+
+.check-icon-box {
+  margin-right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 2px;
+
+  transition: background-color var(--animation-time) var(--animation-function),
+    border var(--animation-time) var(--animation-function);
+
+  @include desktop {
+  }
+}
+
+.icon-check {
+  fill: transparent;
+
+  transition: fill var(--animation-time) var(--animation-function);
+}
+
+.input-check:checked + span {
+  background-color: var(--accent);
+  border: none;
+}
+
+.input-check:checked + .check-icon-box .icon-check {
+  fill: var(--white-colour);
+}
+
+.rules-link {
+  color: var(--accent);
+}
