@@ -56,14 +56,11 @@
   }
 }
 
-@include tablet {
-  .portfolio-list__item:last-child {
-    align-content: flex-start;
-  }
-}
-
 .portfolio-list__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
 
   transition: box-shadow var(--animation-time) var(--animation-function);
 
@@ -74,6 +71,11 @@
   }
 }
 
+// .portfolio-list__link .bottom-part {
+//   @include tablet {
+//     flex-basis: 2;
+//   }
+// }
 .card-box {
   position: relative;
   overflow: hidden;
@@ -118,6 +120,8 @@
 
 .bottom-part {
   padding: 20px 24px;
+
+  flex-grow: 1;
 
   border: 1px #eeeeee;
   border-style: none solid solid solid;

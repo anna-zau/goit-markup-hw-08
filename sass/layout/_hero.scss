@@ -7,14 +7,14 @@
 
   background-color: #2f303a;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../../images/background/hero-bg-mob.jpg);
+    url(../images/background/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @include retina {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../images/background/hero-bg-mob-2x.jpg);
+      url(../images/background/hero-bg-mob-2x.jpg);
   }
 
   @include tablet {
@@ -24,11 +24,11 @@
     height: 400px;
 
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../images/background/hero-bg-tab.jpg);
+      url(../images/background/hero-bg-tab.jpg);
 
     @include retina {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../images/background/hero-bg-tab-2x.jpg);
+        url(../images/background/hero-bg-tab-2x.jpg);
     }
   }
 
@@ -39,11 +39,11 @@
     height: 600px;
 
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../images/background/hero.jpg);
+      url(../images/background/hero.jpg);
 
     @include retina {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../images/background/hero-2x.jpg);
+        url(../images/background/hero-2x.jpg);
     }
   }
 }
